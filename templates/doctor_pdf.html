@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Provider Information</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td colspan="2"><h2>Provider Information</h2></td>
+    </tr>
+    <tr>
+        <td colspan="2"><img src="{{ doctor.image }}"></td>
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td>{{ doctor.first_name }} {{ doctor.last_name }}</td>
+    </tr>
+    <tr>
+        <td>Title</td>
+        <td>{{ doctor.title }}</td>
+    </tr>
+    <tr>
+        <td>Specialty</td>
+        <td>{{ doctor.board_certified_speciality }}</td>
+    </tr>
+    <tr>
+        <td>States</td>
+        <td>{% for state in doctor.states %}{{ state }}{% if not forloop.last %}, {% endif %}{% endfor %}</td>
+    </tr>
+    <tr>
+        <td>About</td>
+        <td>{{ doctor.about }}</td>
+    </tr>
+    <tr>
+        <td colspan="2"><h2>Contact Information</h2></td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td>{{ doctor.email }}</td>
+    </tr>
+    <tr>
+        <td>Phone Number</td>
+        <td>{{ doctor.phone_number }}</td>
+    </tr>
+    <tr>
+        <td>Fax Number</td>
+        <td>{{ doctor.fax_number }}</td>
+    </tr>
+    <tr>
+        <td>Address</td>
+        <td><address>
+            {{ doctor.address1 }}<br>
+            {% if doctor.address2 %}{{ doctor.address2 }}<br>{% endif %}
+            {{ doctor.city }}, {{ doctor.state }} {{ doctor.zip }}
+        </address></td>
+    </tr>
+    <tr>
+        <td colspan="2"><h2>Hours</h2></td>
+    </tr>
+    <tr>
+        <td>Monday</td>
+        {% if doctor.mon_off %}
+            <td>Closed</td>
+        {% else %}
+            <td>{{ doctor.mon_start }} - {{ doctor.mon_end }}</td>
+        {% endif %}
+    </tr>
+    <tr>
+        <td>Tuesday</td>
+        {% if doctor.tue_off %}
+            <td>Closed</td>
+        {% else %}
+            <td>{{ doctor.tue_start }} - {{ doctor.tue_end }}</td>
+        {% endif %}
+    </tr>
+    <tr>
+        <td>Wednesday</td>
+        {% if doctor.wed_off %}
+            <td>Closed</td>
+        {% else %}
+            <td>{{ doctor.wed_start }} - {{ doctor.wed_end }}</td>
+        {% endif %}
+    </tr>
+    <tr>
+        <td>Thursday</td>
+        {% if doctor.thu_off %}
+            <td>Closed</td>
+        {% else %}
+            <td>{{ doctor.thu_start }} - {{ doctor.thu_end }}</td>
+        {% endif %}
+    </tr>
+    <tr>
+        <td>Friday</td>
+        {% if doctor.fri_off %}
+            <td>Closed</td>
+        {% else %}
+            <td>{{ doctor.fri_start }} - {{ doctor.fri_end }}</td>
+        {% endif %}
+    </tr>
+    <tr>
+        <td>Saturday</td>
+        {% if doctor.sat_off %}
+            <td>Closed</td>
+        {% else %}
+            <td>{{ doctor.sat_start }} - {{ doctor.sat_end }}</td>
+        {% endif %}
+    </tr>
+    <tr>
+        <td>Sunday</td>
+        {% if doctor.sun_off %}
+            <td>Closed</td>
+        {% else %}
+            <td>{{ doctor.sun_start }} - {{ doctor.sun_end }}</td>
+        {% endif %}
+    </tr>
+</table>
+</body>
+</html>

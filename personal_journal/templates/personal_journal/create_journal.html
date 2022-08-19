@@ -1,0 +1,22 @@
+{% extends "personal_journal/base.html" %}
+
+{% block title %}Write a Journal Entry{% endblock %}
+
+{% block content %}
+    <h1>Create Journal</h1>
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li  {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <form method="post" class="mb-1">
+      {% csrf_token %} {{ form.as_p }}
+      <input type="submit" value="Save" />
+    </form>
+    
+    <a href="{% url 'personal-journal' %}" class="block">
+            Back to Journal Entries
+    </a>
+{% endblock %}

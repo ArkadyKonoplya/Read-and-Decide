@@ -1,0 +1,30 @@
+{% extends "personal_journal/base.html" %}
+
+{% block title %}Journal Entries{% endblock %}
+
+{% block content %}
+    <h1>Unarchived Journal List</h1>
+    {% if journal_entry_list %}
+    <ul>
+      {% for journal_entry in journal_entry_list %}
+      <li>
+        <a href="{% url 'journal-detail' slug=journal_entry.slug %}">
+          {{ journal_entry.slug }}
+        </a>
+        ({{journal_entry.author}})
+        <a href="{% url 'update-journal' slug=journal_entry.slug %}">
+            Edit Journal Entry
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p>There are no journal entries.</p>
+    {% endif %}
+    <a href="{% url 'create-journal' %}" class="block mb-1">
+        Create Journal Entry
+    </a>
+    <a href="{% url 'archived-entries' %}" class="block">
+        Go to Archived Journal Entries
+    </a>
+{% endblock %}

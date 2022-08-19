@@ -1,0 +1,44 @@
+<table>
+    <tbody>
+    <tr>
+        <th>Date</th>
+        <td>{{ date }}</td>
+    </tr>
+    <tr>
+        <th>Patient Name</th>
+        <td>{{ prescription.patient.first_name }} {{ prescription.patient.last_name }}</td>
+    </tr>
+    <tr>
+        <th>Address</th>
+        <td>{{ prescription.patient_address1 }} {{ prescription.patient_address2 }}</td>
+    </tr>
+    <tr>
+        <th>DOB</th>
+        <td>{{ prescription.patient.date_of_birth }}</td>
+    </tr>
+    <tr>
+        <th>Medicatione Name/Strength</th>
+        <td>{{ prescription.medication }}</td>
+    </tr>
+    <tr>
+        <th>Total Number of Dispensing Allowed</th>
+        <td>{{ prescription.dispensing_allowed }}</td>
+    </tr>
+    <tr>
+        <th>Substitute Allowed</th>
+        <td>{{ prescription.substitute_allowed }}</td>
+    </tr>
+    <tr>
+        <th>Quantity</th>
+        <td>{{ prescription.quantity }}</td>
+    </tr>
+    <tr>
+        <th>Dosage Directions</th>
+        <td>{{ prescription.dosage_directions }}</td>
+    </tr>
+    <tr>
+        <th>Notes</th>
+        <td>{{ prescription.notes }}</td>
+    </tr>
+    </tbody>
+</table>

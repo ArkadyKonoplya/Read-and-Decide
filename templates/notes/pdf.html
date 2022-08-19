@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Provider Note</title>
+</head>
+<body>
+    <h1>Provider Note</h1>
+    <h3><strong>Date Created: </strong>{{ object.date_created }}</h3>
+    <h3><strong>Last Updated: </strong>{{ object.last_updated }}</h3>
+    <h3><strong>Session Date: </strong>{{ object.session_date }}</h3>
+    <h3><strong>Session Time: </strong>{{ object.session_time }}</h3>
+    <h3><strong>Provider: </strong>{{ object.author }}</h3>
+    <h3><strong>Patient: </strong>{{ object.patient }}</h3>
+    <h3><strong>Note:</strong></h3>
+    <p>
+        {{ object.note }}
+    </p>
+</body>
+</html>

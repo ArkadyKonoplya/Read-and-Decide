@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Patient Information</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td colspan="2"><h2>Patient Information</h2></td>
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td>{{ patient.first_name }} {{ patient.last_name }}</td>
+    </tr>
+    <tr>
+        <td>Date of Birth</td>
+        <td>{{ patient.date_of_birth }}</td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td>{{ patient.email }}</td>
+    </tr>
+    <tr>
+        <td>Phone</td>
+        <td>{{ patient.phone_number }}</td>
+    </tr>
+    <tr>
+        <td>Address</td>
+        <td>
+            <address>
+                {{ patient.address1 }}<br>
+                {{ patient.address2 }}<br>
+                {{ patient.city }}, {{ patient.state }} {{ patient.zip }}<br>
+            </address>
+        </td>
+    </tr>
+    <tr>
+        <td>Gender</td>
+        <td>{{ patient.gender }}</td>
+    </tr>
+    <tr>
+        <td>Height</td>
+        <td>{{ patient.height_ft }} ft {{ patient.height_inch }} in</td>
+    </tr>
+    <tr>
+        <td>Weight</td>
+        <td>{{ patient.weight }} lbs {{ patient.weight_unit }}</td>
+    </tr>
+    <tr>
+        <td>Tobacco Use</td>
+        <td>{{ patient.smoke|yesno }}</td>
+    </tr>
+    <tr>
+        <td>Alcohol Use</td>
+        <td>{{ patient.alcohol|yesno }}</td>
+    </tr>
+    <tr>
+        <td>Medications</td>
+        <td>{{ patient.medications }}</td>
+    </tr>
+    <tr>
+        <td>Allergies</td>
+        <td>{{ patient.allergies }}</td>
+    </tr>
+    <tr>
+        <td colspan="2"><h3>Medical History</h3></td>
+    </tr>
+    <tr>
+        <td>Asthma</td>
+        <td>{{ patient.asthma|yesno }}</td>
+    </tr>
+    <tr>
+        <td>Diabetes</td>
+        <td>{{ patient.diabetes|yesno }}</td>
+    </tr>
+    <tr>
+        <td>Heart Problems</td>
+        <td>{{ patient.heart_problems|yesno }}</td>
+    </tr>
+    <tr>
+        <td>High Blood Pressure</td>
+        <td>{{ patient.high_blood_pressure|yesno }}</td>
+    </tr>
+    <tr>
+        <td>Low Blood Pressure</td>
+        <td>{{ patient.low_blood_pressure|yesno }}</td>
+    </tr>
+    <tr>
+        <td>Kidney Problems</td>
+        <td>{{ patient.kidney_problems|yesno }}</td>
+    </tr>
+    <tr>
+        <td>Headaches</td>
+        <td>{{ patient.headaches|yesno }}</td>
+    </tr>
+    <tr>
+        <td>Urinary Tract Infections</td>
+        <td>{{ patient.urinary_tract_infections|yesno }}</td>
+    </tr>
+    <tr>
+        <td>Depression</td>
+        <td>{{ patient.depression|yesno }}</td>
+    </tr>
+    <tr>
+        <td>Seizures</td>
+        <td>{{ patient.seizures|yesno }}</td>
+    </tr>
+    <tr>
+        <td>Stroke</td>
+        <td>{{ patient.stroke|yesno }}</td>
+    </tr>
+    <tr>
+        <td>Thyroid Disease</td>
+        <td>{{ patient.thyroid_disease|yesno }}</td>
+    </tr>
+    <tr>
+        <td>Arrhythmias</td>
+        <td>{{ patient.arrhythmias|yesno }}</td>
+    </tr>
+    <tr>
+        <td>Anxiety</td>
+        <td>{{ patient.anxiety|yesno }}</td>
+    </tr>
+    <tr>
+        <td>Panic Attacks</td>
+        <td>{{ patient.panic_attacks|yesno }}</td>
+    </tr>
+    <tr>
+        <td>COPD</td>
+        <td>{{ patient.copd|yesno }}</td>
+    </tr>
+    <tr>
+        <td>Eczema</td>
+        <td>{{ patient.eczema|yesno }}</td>
+    </tr>
+    <tr>
+        <td>Psoriasis</td>
+        <td>{{ patient.psoriasis|yesno }}</td>
+    </tr>
+    <tr>
+        <td>Cancer</td>
+        <td>{{ patient.cancer|yesno }}</td>
+    </tr>
+    <tr>
+        <td>Other Problems</td>
+        <td>{{ patient.other_problems }}</td>
+    </tr>
+    <tr>
+        <td colspan="2"><h3>Family History</h3></td>
+    </tr>
+    <tr>
+        <td>Asthma</td>
+        <td>{{ patient.family_asthma|yesno }}</td>
+    </tr>
+    <tr>
+        <td>Diabetes</td>
+        <td>{{ patient.family_diabetes|yesno }}</td>
+    </tr>
+    <tr>
+        <td>Heart Problems</td>
+        <td>{{ patient.family_heart_problems|yesno }}</td>
+    </tr>
+    <tr>
+        <td>High Blood Pressure</td>
+        <td>{{ patient.family_high_blood_pressure|yesno }}</td>
+    </tr>
+    <tr>
+        <td>Low Blood Pressure</td>
+        <td>{{ patient.family_low_blood_pressure|yesno }}</td>
+    </tr>
+    <tr>
+        <td>Kidney Problems</td>
+        <td>{{ patient.family_kidney_problems|yesno }}</td>
+    </tr>
+    <tr>
+        <td>Headaches</td>
+        <td>{{ patient.family_headaches|yesno }}</td>
+    </tr>
+    <tr>
+        <td>Urinary Tract Infections</td>
+        <td>{{ patient.family_urinary_tract_infections|yesno }}</td>
+    </tr>
+    <tr>
+        <td>Depression</td>
+        <td>{{ patient.family_depression|yesno }}</td>
+    </tr>
+    <tr>
+        <td>Seizures</td>
+        <td>{{ patient.family_seizures|yesno }}</td>
+    </tr>
+    <tr>
+        <td>Stroke</td>
+        <td>{{ patient.family_stroke|yesno }}</td>
+    </tr>
+    <tr>
+        <td>Thyroid Disease</td>
+        <td>{{ patient.family_thyroid_disease|yesno }}</td>
+    </tr>
+    <tr>
+        <td>Arrhythmias</td>
+        <td>{{ patient.family_arrhythmias|yesno }}</td>
+    </tr>
+    <tr>
+        <td>Anxiety</td>
+        <td>{{ patient.family_anxiety|yesno }}</td>
+    </tr>
+    <tr>
+        <td>Panic Attacks</td>
+        <td>{{ patient.family_panic_attacks|yesno }}</td>
+    </tr>
+    <tr>
+        <td>COPD</td>
+        <td>{{ patient.family_copd|yesno }}</td>
+    </tr>
+    <tr>
+        <td>Eczema</td>
+        <td>{{ patient.family_eczema|yesno }}</td>
+    </tr>
+    <tr>
+        <td>Psoriasis</td>
+        <td>{{ patient.family_psoriasis|yesno }}</td>
+    </tr>
+    <tr>
+        <td>Cancer</td>
+        <td>{{ patient.family_cancer|yesno }}</td>
+    </tr>
+    <tr>
+        <td>Other Problems</td>
+        <td>{{ patient.family_other_problems }}</td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Journal Entry</title>
+</head>
+<body>
+    <h1>Personal Journal Entry</h1>
+    <h3><strong>Date Created: </strong>{{ object.date_created }}</h3>
+    <h3><strong>Last Updated: </strong>{{ object.last_updated }}</h3>
+    <h3><strong>Title: </strong>{{ object.title }}</h3>
+    <h3><strong>Excerpt: </strong>{{ object.excerpt }}</h3>
+    <h3><strong>Content:</strong></h3>
+    <p>
+        {{ object.content }}
+    </p>
+</body>
+</html>
